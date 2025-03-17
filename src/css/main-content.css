@@ -1,0 +1,87 @@
+body {
+    color: var(--text-base-light);
+    line-height: 1.8rem;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 4rem 4rem;
+}
+
+.introduction .img-logo-primary img {
+    width: 600px
+}
+
+.introduction .paragraph_intro {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 2rem;
+    margin: 1rem 1rem;
+    padding: 10px;
+}
+
+.introduction a {
+    text-align: justify;
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--text-base-dark);
+}
+
+.sponsors {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 4rem;
+}
+
+.sponsors h4 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-base-light);
+}
+
+.sponsors .sponsor-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.sponsors .sponsor-container .sponsor {
+    border: 1px solid var(--text-base-dark);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.sponsors .sponsor-container .sponsor img{
+    width: 40px;
+    padding: 0rem 1rem;
+}
+
+.who-we-are {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 4rem;
+}
+
+.who-we-are .who-we-are__title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.who-we-are p {
+    text-align: justify;
+    margin: 1rem 20rem;
+    font-size: 20px;
+}
