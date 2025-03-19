@@ -159,7 +159,6 @@ body {
 .projects .project-container .project h3 {
     font-size: 24px;
     font-weight: 700;
-    color: var(--text-base-light);
 }
 
 .projects .project-container .project .buttons-see {
@@ -199,6 +198,24 @@ body {
 
 .projects .project-container .project .buttons-see .see-project:hover {
     transform: scale(1.1);
+    background-color: var(--bg-button-color-hover2);
+    color: var(--text-base-light);
+}
+
+.projects .project-container .button-carrossel {
+    max-width: 50px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid var(--text-base-dark);
+    border-radius: 100px;
+    color: var(--text-base-light);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.projects .project-container .button-carrossel:hover {
     background-color: var(--bg-button-color-hover2);
     color: var(--text-base-light);
 }
