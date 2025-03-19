@@ -3,8 +3,12 @@
 :root {
     /* Colors */
     --bg-color: #212832;
+    --bg-color2: #393D46;
     --bg-header-color: #00ADB4;
-    --bg-button-color: #FFE0A6;
+    --bg-button-color: #d6d6d6;
+    --bg-button-color2: #00ADB4;
+    --bg-button-color-hover1: #ababab;
+    --bg-button-color-hover2: #006d71;
     --text-base-light: #E8E8E8;
     --text-base-dark: #00ADB4;
 
