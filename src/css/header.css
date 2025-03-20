@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+
+    height: 8vh;
+    max-height: 15vh;
+    padding: 0 1vw;
     background-color: var(--bg-header-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -27,7 +28,7 @@ header {
 }
 
 .navbar ul li a {
-    font-family: 'Inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--font-inter);
     font-weight: 500;
     position: relative;
     color: var(--text-base-light);

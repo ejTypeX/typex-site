@@ -1,0 +1,31 @@
+.who-we-are {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 4rem;
+    background-color: var(--bg-color2);
+}
+
+.who-we-are__title {
+    margin-top: 3rem;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.who-we-are p {
+    text-align: justify;
+    margin: 1rem 20rem;
+    font-size: 20px;
+}
+
+.who-we-are .MVV .mvv-title {
+    font-size: 26px;
+    margin-bottom: 1.5rem;
+}
+
+.who-we-are .MVV .mvv-text3{
+    margin-bottom: 4rem;
+}

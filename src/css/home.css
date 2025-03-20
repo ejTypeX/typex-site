@@ -1,0 +1,88 @@
+.home {
+    height: 71.4vh;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10vw;
+    padding: 10vh 5vw;
+    margin-top: 14vh;
+}
+
+.img-logo-primary img {
+    height: max-content;
+    width: 40vw;
+}
+
+.paragraph_intro {
+    text-align: justify;
+    font-size: 20px;
+    font-family: var(--font-poppins);
+    line-height: 2rem;
+    margin: 1rem 1rem;
+    padding: 10px;
+}
+
+.paragraph_intro button a {
+    font-size: 1.2vw;
+    font-weight: 400;
+    font-family: var(--font-inter);
+}
+
+.paragraph_intro button a i {
+    font-size: 1.1vw;
+    margin-left: 0.5vw;
+    font-weight: 100;
+}
+
+.paragraph_intro button {
+    all: unset;
+    margin-top: 5vh;
+}
+
+.introduction a {
+    text-align: justify;
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--text-base-dark);
+}
+
+.sponsors {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 7vh;
+}
+
+.sponsors h4 {
+    margin-left: 9.2vw;
+    text-align: left;
+    font-family: var(--font-poppins);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-base-light);
+}
+
+.sponsor-container {
+    display: flex;
+    margin-left: 9vw;
+    gap: 3vw;
+}
+
+.sponsor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+    border: 1px solid var(--text-base-dark);
+    border-radius: 8px;
+    padding: 1.5vh 1vw;
+    min-width: 10vw;
+}
+
+.sponsor img{
+    width: auto;
+    height: 100%;
+}

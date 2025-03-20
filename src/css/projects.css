@@ -1,0 +1,102 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 4rem;
+}
+
+.projects h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-base-light);
+}
+
+.projects .projects-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-base-dark);
+    margin-bottom: 3rem;
+}
+
+.projects .project-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.projects .project-container .project {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--text-base-dark);
+    border-radius: 8px;
+}
+
+.projects .project-container .project h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.projects .project-container .project .buttons-see {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.projects .project-container .project .buttons-see .see-code {
+    all: unset;
+    padding: 12px 20px;
+    background-color: var(--bg-button-color);
+    color: black;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.projects .project-container .project .buttons-see .see-code:hover {
+    transform: scale(1.1);
+    background-color: var(--bg-button-color-hover1); 
+    color: white; 
+}
+
+.projects .project-container .project .buttons-see .see-project {
+    all: unset;
+    padding: 12px 20px;
+    background-color: #00ADB4;
+    color: black;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.projects .project-container .project .buttons-see .see-project:hover {
+    transform: scale(1.1);
+    background-color: var(--bg-button-color-hover2);
+    color: var(--text-base-light);
+}
+
+.projects .project-container .button-carrossel {
+    max-width: 50px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid var(--text-base-dark);
+    border-radius: 100px;
+    color: var(--text-base-light);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.projects .project-container .button-carrossel:hover {
+    background-color: var(--bg-button-color-hover2);
+    color: var(--text-base-light);
+}
