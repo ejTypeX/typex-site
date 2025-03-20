@@ -7,6 +7,7 @@
     gap: 20px;
     padding: 20px;
     margin-top: 4rem;
+    background: linear-gradient(to bottom, #212832 0%, #1E1E1E 100%);
 }
 
 .projects h1 {

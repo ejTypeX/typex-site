@@ -9,3 +9,25 @@ body {
     color: var(--text-base-light);
     line-height: 1.8rem;
 }
+
+.neon-effect {
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 
+        0 0 1px #00ADB4,
+        0 0 2px #00ADB4,
+        0 0 4px #00ADB4,
+        0 0 8px #00ADB4;
+    transition: box-shadow 0.3s ease;
+}
+
+.neon-effect:hover {
+    box-shadow: 
+        0 0 2px #00ADB4,
+        0 0 4px #00ADB4,
+        0 0 8px #00ADB4,
+        0 0 16px #00ADB4;
+}

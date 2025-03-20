@@ -4,28 +4,55 @@
     text-align: center;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
     margin-top: 4rem;
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color);
 }
 
 .who-we-are__title {
-    margin-top: 3rem;
-    font-size: 30px;
+    margin: 3rem 0 2rem 0;
+    font-size: 5vh;
     font-weight: 700;
+    font-family: var(--font-inter);
 }
 
 .who-we-are p {
     text-align: justify;
-    margin: 1rem 20rem;
     font-size: 20px;
+    font-family: var(--font-poppins);
 }
 
 .who-we-are .MVV .mvv-title {
+    text-align: left;
     font-size: 26px;
     margin-bottom: 1.5rem;
 }
 
 .who-we-are .MVV .mvv-text3{
     margin-bottom: 4rem;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    margin: 6vh 18vw;
+}
+
+.content-top {
+    padding: 3vh 12vw;
+}
+
+.content-image {
+    overflow: hidden;
+    height: 35vh;
+    min-width: 30vw;
+    border-radius: 0.5vw;
+    border: 2px solid var(--bg-header-color);
+}
+
+.content-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
