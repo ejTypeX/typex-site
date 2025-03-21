@@ -1,0 +1,79 @@
+.servicos {
+    background-color: var(--bg-color3);
+    height: 100vh;
+    width: 100vw;
+    padding-top: 10vh;
+}
+
+.servicos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicos_title {
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+    font-size: 5vh;
+    font-weight: 700;
+    font-family: var(--font-inter);
+}
+
+.servicos-top {
+    height: 20vh;
+    width: 50vw;
+    gap: 20px;
+    padding: 3vh 12vw;
+}
+
+.servicos-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70vh;
+    width: 100vw;
+}
+
+.servicos-card {
+    display: flex;
+    flex-direction: column;
+    width: 26vw;
+    gap: 2.5vh;
+}
+
+.servicos-card-img {
+    overflow: hidden;
+    height: 40vh;
+    width: 26vw;
+}
+
+.servicos-card-img img {
+    object-fit: cover;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.servicos-card h2 {
+    font-family: var(--font-inter);
+    font-size: 1.6vw;
+}
+
+.servicos-card p {
+    font-family: var(--font-poppins);
+}
+
+.servicos-card button {
+    font-family: var(--font-inter);
+    padding: 10px 2px;
+    width: 25%;
+    border-radius: 5px;
+    background-color: var(--bg-header-color);
+    font-weight: 600;
+    color: white;
+}
+.servicos-card button i {
+    margin-left: 10px;
+}
+

@@ -26,16 +26,22 @@
 .projects .project-container {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    align-items: center;
+    gap: 5vw;
+    max-width: 95vw;
 }
 
 .projects .project-container .project {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
     padding: 20px;
-    border: 1px solid var(--text-base-dark);
-    border-radius: 8px;
+    border: 1px solid;
+    border-radius: 20px;
+    height: 60vh;
+    width: 24vw;
 }
 
 .projects .project-container .project h3 {
@@ -85,13 +91,13 @@
 }
 
 .projects .project-container .button-carrossel {
-    max-width: 50px;
+    width: 2vw;
+    height: 5vh;
     margin-right: 1rem;
-    margin-left: 1rem;
     padding: 10px;
     background-color: transparent;
     border: 1px solid var(--text-base-dark);
-    border-radius: 100px;
+    border-radius: 10px;
     color: var(--text-base-light);
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;

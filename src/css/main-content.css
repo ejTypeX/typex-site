@@ -4,10 +4,12 @@
 @import url('header.css');
 @import url('footer.css');
 @import url('vars.css');
+@import url('servicos.css');
 
 body {
     color: var(--text-base-light);
     line-height: 1.8rem;
+    overflow-x: hidden;
 }
 
 .neon-effect {
