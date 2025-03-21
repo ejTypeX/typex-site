@@ -77,3 +77,24 @@
     margin-left: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    .servicos {
+        height: auto;
+    }   
+    
+    .servicos-content {
+        flex-direction: column;
+        height: auto;
+        gap: 5vh;
+    }
+
+    .servicos-card {
+        width: 80vw;
+    }
+
+    .servicos-card-img {
+        width: 100%;
+        height: auto;
+    }
+}
+

@@ -91,3 +91,57 @@
     width: auto;
     height: 100%;
 }
+
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 5vw;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 12vw;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 3vh;
+        padding: 10px 0;
+    }
+
+    .introduction {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+        padding: 5vh 5vw;
+    }
+
+    .img-logo-primary img {
+        width: 80vw;
+    }
+
+    .paragraph_intro {
+        font-size: 16px;
+        line-height: 1.8rem;
+        text-align: center;
+    }
+
+    .paragraph_intro button {
+        width: 80%;
+        text-align: center;
+    }
+
+    .sponsors h4 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .sponsor-container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        gap: 10px;
+    }
+}

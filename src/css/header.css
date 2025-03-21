@@ -50,3 +50,22 @@ header {
 .navbar ul li a:hover::after {
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 5vw;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 12vw;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 3vh;
+        padding: 10px 0;
+    }
+}

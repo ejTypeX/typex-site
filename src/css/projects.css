@@ -107,3 +107,16 @@
     background-color: var(--bg-button-color-hover2);
     color: var(--text-base-light);
 }
+
+
+@media screen and (max-width: 768px) {
+    .projects .project-container {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .projects .project-container .project {
+        width: 80vw;
+        height: auto;
+    }
+}
