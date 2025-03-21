@@ -7,6 +7,10 @@
 @import url('servicos.css');
 @import url('futuro.css');
 
+main {
+    height: max-content;
+}
+
 body {
     color: var(--text-base-light);
     line-height: 1.8rem;

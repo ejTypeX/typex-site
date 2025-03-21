@@ -1,8 +1,8 @@
 .servicos {
     background-color: var(--bg-color3);
-    height: 100vh;
+    height: max-content;
     width: 100vw;
-    padding-top: 10vh;
+    padding-top: 5vh;
 }
 
 .servicos-container {
@@ -21,7 +21,7 @@
 }
 
 .servicos-top {
-    height: 20vh;
+    height: max-content;
     width: 50vw;
     gap: 20px;
     padding: 3vh 12vw;

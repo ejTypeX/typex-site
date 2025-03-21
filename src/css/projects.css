@@ -26,9 +26,9 @@
 .projects .project-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 5vw;
-    max-width: 95vw;
+    width: 100vw;
 }
 
 .projects .project-container .project {
@@ -37,11 +37,11 @@
     align-items: center;
     justify-content: center;
     gap: 5vh;
-    padding: 20px;
+    padding: 1%;
     border: 1px solid;
     border-radius: 20px;
-    height: 60vh;
-    width: 24vw;
+    height: 50%;
+    width: 24%;
 }
 
 .projects .project-container .project h3 {
@@ -93,7 +93,7 @@
 .projects .project-container .button-carrossel {
     width: 2vw;
     height: 5vh;
-    margin-right: 1rem;
+    margin: 0 2vw;
     padding: 10px;
     background-color: transparent;
     border: 1px solid var(--text-base-dark);
@@ -109,10 +109,10 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .projects .project-container {
         flex-direction: column;
-        gap: 5vh;
+        gap: 3vh;
     }
 
     .projects .project-container .project {
