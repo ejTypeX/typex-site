@@ -5,6 +5,7 @@
 @import url('footer.css');
 @import url('vars.css');
 @import url('servicos.css');
+@import url('futuro.css');
 
 body {
     color: var(--text-base-light);

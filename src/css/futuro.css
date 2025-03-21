@@ -1,0 +1,93 @@
+.futuro {
+    background-color: var(--bg-color3);
+    height: 92vh;
+    width: 100vw;
+    padding-top: 8vh;
+}
+
+.futuro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.futuro_title {
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+    font-size: 5vh;
+    font-weight: 700;
+    font-family: var(--font-inter);
+}
+
+.futuro-top {
+    display: flex;
+    font-weight: 500;
+    justify-content: center;
+    flex-direction: column;
+    height: 20vh;
+    width: 50vw;
+    gap: 20px;
+    padding: 3vh 12vw;
+}
+
+.futuro-top-img {
+    height: 4vh;
+    width: 100vh;
+}
+
+.futuro-top-img img {
+    height: 100%;
+    width: 100%;
+}
+
+.futuro-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70vh;
+    width: 100vw;
+}
+
+.futuro-item {
+    width: 40vw;
+    margin: 5vh 5vw;
+    text-align: center;
+}
+
+.futuro-item h2 {
+    font-family: var(--font-inter);
+    color: var(--bg-header-color);
+    font-size: 3vh;
+    margin: 2vh;
+}
+
+.futuro-item p {
+    font-family: var(--font-poppins);
+    font-weight: 300;
+}
+
+.futuro-item button {
+    background-color: transparent;
+    font-family: var(--font-poppins);
+    font-weight: bold;
+    font-size: 1.6vh;
+    position: relative;
+    color: var(--text-base-light);
+    text-decoration: none;
+}
+
+.futuro-item button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; 
+    height: 2px;
+    background-color: var(--text-base-light);
+    transition: width 0.3s ease-in-out; 
+}
+
+.futuro-item button:hover::after {
+    width: 100%;
+}
