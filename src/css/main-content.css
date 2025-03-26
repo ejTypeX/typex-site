@@ -7,14 +7,21 @@
 @import url('servicos.css');
 @import url('futuro.css');
 
-main {
-    height: max-content;
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body {
     color: var(--text-base-light);
     line-height: 1.8rem;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+main {
+    height: max-content;
+    overflow: hidden;
 }
 
 .neon-effect {
@@ -37,4 +44,12 @@ body {
         0 0 4px #00ADB4,
         0 0 8px #00ADB4,
         0 0 16px #00ADB4;
+}
+
+.hidden {
+    transform: translateY(-100%); /* Move para cima (fora da tela) */
+}
+
+.scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }

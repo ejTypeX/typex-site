@@ -80,7 +80,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4vh;
+    height: 7vh;
     border: 1px solid var(--text-base-dark);
     border-radius: 8px;
     padding: 1.5vh 1vw;
@@ -93,29 +93,14 @@
 }
 
 
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 5vw;
-        text-align: center;
-    }
-
-    .logo img {
-        width: 12vw;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 3vh;
-        padding: 10px 0;
-    }
+@media (max-width: 768px) {
 
     .introduction {
         flex-direction: column;
         align-items: center;
         gap: 5vh;
-        padding: 5vh 5vw;
+        padding: 5vh 5vw 2vh 5vw;
+        margin-top: 7vh;
     }
 
     .img-logo-primary img {
@@ -130,18 +115,49 @@
 
     .paragraph_intro button {
         width: 80%;
+        height: 5vh;
+
         text-align: center;
     }
 
-    .sponsors h4 {
-        text-align: center;
-        margin-left: 0;
+    .paragraph_intro button a {
+        font-weight: bold;
+        font-size: 3vw;
+    }
+    
+    .paragraph_intro button a i {
+        font-size: 3vw;
+        margin-left: 0.5vw;
+        font-weight: 500;
     }
 
-    .sponsor-container {
+    .sponsors {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        gap: 5px;
+        margin-top: 0;
+    }
+    
+    .sponsors h4 {
         margin-left: 0;
-        gap: 10px;
+        text-align: center;
+        font-family: var(--font-poppins);
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--text-base-light);
+    }
+    
+    .sponsor-container {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+        gap: 3vw;
+    }
+    
+    .sponsor {
+        border: 1px solid var(--text-base-dark);
+        border-radius: 8px;
+        padding: 1.5vh 1vw;
+        min-width: 10vw;
     }
 }

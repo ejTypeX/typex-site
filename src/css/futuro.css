@@ -26,14 +26,13 @@
     justify-content: center;
     flex-direction: column;
     height: max-content;
-    width: 50vw;
+    width: 80vw;
     gap: 20px;
     padding: 3vh 12vw;
 }
 
 .futuro-top-img {
     height: 4vh;
-    width: 100vh;
 }
 
 .futuro-top-img img {

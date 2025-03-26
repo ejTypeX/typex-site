@@ -1,94 +1,110 @@
+/* ===== FOOTER ===== */
 footer {
-    height: 120vh;
+    color: var(--text-base-light); /* Cor do texto clara */
+    background-color: var(--bg-header-color); /* Cor de fundo escura (original) */
+}
+
+.footer-container {
+    height: max-content;
     width: 100vw;
 }
 
 .footer-content {
-    text-align: center;
+    padding-top: 3vh;
+    gap: 3vw;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 5vh 30vw;
-    gap:10vh;
-    height: 100vh;
-    width: 40vw;
-    background-color: var(--bg-header-color);
+    align-items: flex-start;
 }
 
-.footer-content h1 {
-    font-size: 5.5vh;
+  /* Redes Sociais */
+.redes-sociais h1,
+.localizacao h1,
+.contato h1 {
+    font-family: var(--font-inter);
+    font-size: 2.5vh; /* Ajustado para melhor responsividade */
     margin-bottom: 4vh;
+}
+  
+.redes-sociais a {
+    color: inherit; /* Mantém a cor do texto pai */
+    margin-right: 20px; /* Espaçamento entre ícones */
+    font-size: 4vh; /* Tamanho dos ícones */
+    transition: transform 0.2s ease;
 }
 
 .redes-sociais a i {
-    transition: transform 0.1s ease-in;
+    font-size: 3vh;
 }
-
-.redes-sociais a i:hover {
+  
+.redes-sociais a:hover {
     transform: scale(1.12);
 }
-
-.redes-sociais i {
-    margin: 0 2vw;
-    font-size: 5vh;
-    color: var(--text-base-light);
-}
-
-
+  
+  /* Localização */
 .localizacao a {
-    display: inline-block;
-    color: var(--text-base-light);
+    color: inherit;
     font-size: 2.1vh;
-
-    transition: transform 0.2s ease-in;
+    display: inline-block;
+    transition: transform 0.2s ease;
 }
-
+  
 .localizacao a:hover {
     transform: scale(1.06);
+    text-decoration: none; /* Remove sublinhado padrão */
 }
-
-.contato div {
-    font-family: var(--font-poppins);
-    display: flex;
-    flex-direction: column;
+  
+  /* Formulário */
+.contato label {
     text-align: left;
-}
-
-.contato input, .contato textarea {
     font-family: var(--font-poppins);
-    width: 30vw;
-    height: 4vh;
-    padding: 0.2vh 0.5vw;
-    margin-bottom: 3vh;
+    margin-bottom: 0.5vh;
+}
+  
+.contato input,
+.contato textarea {
+    width: 100%; /* Ocupa 100% da coluna Bootstrap */
+    padding: 10px;
+    margin-bottom: 2vh;
     border: 0;
     border-radius: 5px;
+    font-family: var(--font-poppins);
 }
-
+  
 .contato textarea {
-    height: 10vh;
-    padding: 1vh 0.5vw;
+    height: 15vh;
 }
-
+  
 .contato button {
-    all: unset;
-    cursor: pointer;
-    margin: 3vh;
-    padding: 5px 35px;
     background-color: var(--bg-color3);
+    color: white;
+    border: none;
+    padding: 8px 35px;
     font-weight: bold;
-
-    transition: transform 0.2s ease-in;
+    transition: transform 0.2s ease;
+    width: 100%; /* Botão ocupa toda a largura */
 }
-
+  
 .contato button:hover {
     transform: scale(1.06);
 }
-
+  
 .end {
+    background-color: var(--bg-color3);
+    height: 7vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10vh;
-    background-color: var(--bg-color3);
+    margin-top: 5vh;
+}
+  
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .redes-sociais a {
+        margin: 0 3vw; /* Mais espaço em mobile */
+    }
+
+    .contato {
+        padding: 0 20px; /* Evita que o formulário cole nas bordas */
+}
 }
