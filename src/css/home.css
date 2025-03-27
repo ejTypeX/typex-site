@@ -99,7 +99,7 @@
         flex-direction: column;
         align-items: center;
         gap: 5vh;
-        padding: 5vh 5vw 2vh 5vw;
+        padding: 16vh 5vw 2vh 5vw;
         margin-top: 7vh;
     }
 
@@ -134,7 +134,7 @@
     .sponsors {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 20px;
         margin-top: 0;
     }
     

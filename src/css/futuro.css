@@ -90,3 +90,11 @@
 .futuro-item button:hover::after {
     width: 100%;
 }
+
+@media (max-width: 768px) {
+    .futuro-top {
+        width: 100vw;
+        padding: 1vh 6.5vw 1vh 6.5vw;
+        text-align: center;
+    }
+}

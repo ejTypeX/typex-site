@@ -4,6 +4,12 @@ footer {
     background-color: var(--bg-header-color); /* Cor de fundo escura (original) */
 }
 
+.responsivity {
+    display: flex;
+    width: max-content;
+    gap: 22vw;
+}
+
 .footer-container {
     height: max-content;
     width: 100vw;
@@ -13,6 +19,7 @@ footer {
     padding-top: 3vh;
     gap: 3vw;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
 }
@@ -104,7 +111,31 @@ footer {
         margin: 0 3vw; /* Mais espaço em mobile */
     }
 
+    .footer-content {
+        justify-content: space-between;
+        padding: 2vh 2vw;
+    }
+
     .contato {
         padding: 0 20px; /* Evita que o formulário cole nas bordas */
-}
+        width: 48vw;
+    }
+
+    .redes-sociais a {
+        margin-right: 0;
+    }
+
+    .redes-sociais h1 {
+        text-align: center;
+    }
+
+    .localizacao, .redes-sociais {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .responsivity {
+        flex-direction: column;
+        width: 48vw;
+    }
 }

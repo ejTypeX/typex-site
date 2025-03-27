@@ -96,5 +96,11 @@
         width: 100%;
         height: auto;
     }
+
+    .servicos-top {
+        width: 100vw;
+        padding: 3vh 6.5vw 3vh 6.5vw;
+        text-align: center;
+    }
 }
 
