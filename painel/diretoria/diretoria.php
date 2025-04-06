@@ -1,6 +1,7 @@
 <?php 
     include '../../includes/header.php';
     include "../../includes/connect.php";
+    include "../diretoria/metas.php";
 ?>
 
 <link rel="stylesheet" href="../../resources/css/layout.css">
@@ -37,7 +38,7 @@
                     <tr>
                         <td>1</td>
                         <td><input type="text" name="nomeMeta" value="Projetar protótipo" id="nomeMeta" placeholder="Digite o nome da meta"></td>
-                        <td><input type="text" name="descricao"value="descricao" id="descricao" placeholder="Digite a descrição da meta"></td>
+                        <td><input type="text" name="descricao"value="descricao" id="descricao" placeholder="Escreva a descrição da meta"></td>
                         <td>
                             <select name="status" id="status" required>
                                 <option name="pendente" value="Pendente" id="pendente" >Pendente</option>
@@ -78,7 +79,7 @@
                     <tr>
                         <td>1</td>
                         <td><input type="text" name="nomeTarefa" value="Fazer formulário" id="nomeTarefa" placeholder="Digite o nome da tarefa"></td>
-                        <td><input type="text" name="descricao" value="descricao" id="descricao" placeholder="Digite a descrição"></td>
+                        <td><input type="text" name="descricao" value="descricao" id="descricao" placeholder="Escreva a descrição da tarefa"></td>
                         <td>
                             <select name="status" id="status" required>
                                 <option name="pendente" value="Pendente" id="pendente">Pendente</option>
@@ -96,12 +97,56 @@
 
     <div id="progresso">
         <h2>Visualizar Progresso das Tarefas</h2>
-        <button onclick="alertMessage('Visualizar progresso das tarefas')">Visualizar Progresso</button>
+
+        <form action="VizualizarProgresso.php" method='get'></form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome da Tarefa</th>
+                        <th>Status</th>
+                        <th>Observações</th>
+                    </tr>
+                </thead>
+            </table>
+        </form>
     </div>
 
     <div id="calendario">
         <h2>Gerenciar Calendário de Reuniões</h2>
-        <button onclick="alertMessage('Gerenciar calendário de reuniões')">Gerenciar Calendário</button>
+
+        <form action="calendarioReuniao.php" method="post"></form>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Assunto</th>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                    <th>Horário</th>
+                    <th>Tipo</th>
+                    <th>Ações Definidas</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text" name="assunto" value="Organizar tarefas entre as equipes" id="assunto" placeholder="Digite o assunto"></td>
+                        <td><input type="text" name="descricao" value="descricao" id="descricao" placeholder="Escreva a descrição da reunião"></td>
+                        <td><input type="date" name="data" id="data"></td>
+                        <td><input type="datetime" name="horario" id="horario"></td>
+                        <td>
+                            <select name="tipo" id="tipo">
+                                <option name="presencial" value="Presencial" id="presencial">Presencial</option>
+                                <option name="online" value="Online" id="online">Online</option>
+                                <option name="hibrida" value="Híbrida" id="hibrida">Híbrida</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="acoesDefinidas" value="Tarefas definidas para cada diretoria" id="acoesDefinidas" placeholder="Escreva as ações definidas"></td>
+                    </tr>
+                </tbody>
+            </thead>
+        </table>
+        <button type="submit">Salvar Reunião</button>
     </div>
 
     <div id="atas">
