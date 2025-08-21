@@ -1,355 +1,758 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TypeX</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <link rel="stylesheet" href="src/css/reset.css">
-        <link rel="stylesheet" href="src/css/main-content.css">
-        <link rel="shortcut icon" href="src/images/tx-logo (1).ico" type="image/x-icon">
-        <script type="module" src="src/js/script.js" defer></script>
-    </head>
-<body>
-    <header id="header">
-        <div class="logo">
-            <img src="src/images/small logo.svg" alt="Logo Curta da TypeX">
-        </div>
-        <div class="navbar">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#who-we-are">Quem Somos</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#futuro">Futuro</a></li>
-                    <li><a href="#footer">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section id="home" class="home">
-            <div class="introduction">
-                <div class="img-logo-primary">
-                    <img src="src/images/typeX - escrita.svg" alt="Logo da TypeX">
-                </div>
-                <div class="paragraph_intro">
-                    <p>
-                        A TypeX é uma empresa júnior especializada no desenvolvimento de 
-                        sistemas personalizados e soluções tecnológicas inovadoras. Além 
-                        disso, organiza eventos como hackathons e meetups para promover 
-                        a troca de conhecimento e integrar estudantes e empresas, preparando 
-                        futuros profissionais para desafios reais do mercado.
-                    </p>
-                    <button>
-                        <a href="#">VEJA NOSSOS PROJETOS <i class="fa-solid fa-greater-than"></i></a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeX - Empresa Júnior UTFPR</title>
+    <link rel="icon" href="src/images/tx-logo.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <meta name="description" content="TypeX - Empresa Júnior de tecnologia da UTFPR. Conheça nossa equipe, projetos e serviços.">
+    <style> 
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #06b6d4, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-effect {
+            backdrop-filter: blur(16px) saturate(180%);
+            background-color: rgba(17, 25, 40, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.125);
+        }
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .parallax {
+            transform: translateZ(0);
+            will-change: transform;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen">
+    <header class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="glass-effect">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <img src="src/images/typex-logo.svg" alt="TypeX Logo" class="h-12 w-auto">
+                    </div>
+                    <nav class="hidden md:flex gap-8">
+                        <a href="#home" class="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110">Home</a>
+                        <a href="#quem-somos" class="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110">Quem Somos</a>
+                        <a href="#servicos" class="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110">Serviços</a>
+                        <a href="#diretoria" class="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110">Diretoria</a>
+                        <a href="#membros" class="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110">Membros</a>
+                        <a href="#projetos" class="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110">Projetos</a>
+                        <a href="#contato" class="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-110">Contato</a>
+                    </nav>
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-white" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
-            <div class="sponsors">
-                <h4 class="sponsor-title">Nossos Parceiros</h4>
-                <div class="sponsor-container">
-                    <a href="https://www.utfpr.edu.br/" target="_blank">
-                        <div class="sponsor neon-effect">
-                            <img style="width: 120px;" src="src/images/utfpr-logo.png" alt="Logo da UTFPR">
-                        </div>
-                    </a>
-                    <a href="https://cresol.com.br/" target="_blank">
-                        <div class="sponsor neon-effect">
-                            <img src="src/images/logo-cresol.png" alt="Logo da Cresol">
-                        </div>
-                    </a>
-                    <a href="https://projetotransformar.my.canva.site/" target="_blank">
-                        <div class="sponsor neon-effect">
-                            <img src="src/images/logo-projeto-transformar.jpeg" alt="Logo do Projeto Transformar">
-                        </div>
-                    </a>
-                    <a href="https://www.gov.br/receitafederal/pt-br" target="_blank">
-                        <div class="sponsor neon-effect">
-                            <img src="https://www.gov.br/receitafederal/pt-br/assuntos/aduana-e-comercio-exterior/manuais/remessas-postal-e-expressa/calculadora-versao-iii/componentes/cabecalho/img/receita-federal-logo.png" alt="Logo da Amazon">
-                        </div>
-                    </a>
-                </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden glass-effect hidden" id="mobile-menu">
+            <div class="container mx-auto px-6 py-4 flex flex-col gap-4">
+                <a href="#home" class="text-white hover:text-cyan-400 transition">Home</a>
+                <a href="#quem-somos" class="text-white hover:text-cyan-400 transition">Quem Somos</a>
+                <a href="#servicos" class="text-white hover:text-cyan-400 transition">Serviços</a>
+                <a href="#diretoria" class="text-white hover:text-cyan-400 transition">Diretoria</a>
+                <a href="#membros" class="text-white hover:text-cyan-400 transition">Membros</a>
+                <a href="#projetos" class="text-white hover:text-cyan-400 transition">Projetos</a>
+                <a href="#contato" class="text-white hover:text-cyan-400 transition">Contato</a>
             </div>
-        </section>
-        <section id="who-we-are" class="who-we-are">
-            <div class="content-top">
-                <h1 class="who-we-are__title">Quem Somos</h1>
-                <p>
-                    A TypeX foi fundada por um grupo de estudantes da UTFPR com o objetivo 
-                    de unir o aprendizado acadêmico à prática do mercado. Desde sua criação, 
-                    a empresa tem se destacado pelo desenvolvimento de sistemas tecnológicos 
-                    inovadores, além da promoção de eventos como hackathons e meetups, que 
-                    ajudam a aproximar estudantes, empresas e profissionais do setor de TI.
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Background Animation -->
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+            <div class="absolute inset-0 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"></div>
+            <!-- Floating Particles -->
+            <div class="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto" data-aos="fade-up">
+            <div class="mb-8">
+                <img src="src/images/typex-logo.svg" alt="TypeX Logo" class="h-24 w-auto mx-auto mb-6 floating">
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black mb-6 gradient-text leading-tight">
+                Inovação em <br>Código
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-gray-300 leading-relaxed">
+                Somos a Empresa Júnior de tecnologia da UTFPR, transformando ideias em soluções digitais que impactam o futuro
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contato" class="group px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <span class="flex items-center gap-2">
+                        Fale Conosco
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </span>
+                </a>
+                <a href="#projetos" class="px-8 py-4 rounded-full border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 font-semibold transition-all duration-300 transform hover:scale-105">
+                    Ver Projetos
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <section id="quem-somos" class="py-20 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-900 to-gray-800"></div>
+        <div class="relative z-10 max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 gradient-text">Quem Somos</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    A TypeX é formada por estudantes da UTFPR apaixonados por tecnologia, inovação e empreendedorismo. 
+                    Desenvolvemos soluções que transformam negócios e preparamos profissionais para o futuro.
                 </p>
             </div>
-            <div class="item">     
-                <div class="content">    
-                    <div class="MVV">
-                        <h3 class="mvv-title">Missão</h3>
-                        <p class="mvv-text">
-                            Nossa missão é desenvolver soluções tecnológicas inovadoras e de 
-                            qualidade, atendendo às necessidades de empresas e organizações, 
-                            enquanto promovemos o aprendizado prático e a formação de futuros 
-                            profissionais capacitados para os desafios do mercado.
-                        </p>
+            
+            <!-- MVV Cards -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="glass-effect p-8 rounded-2xl transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-bullseye text-4xl text-cyan-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-cyan-400">Missão</h3>
                     </div>
-                </div>
-                <div class="content-image">
-                    <img src="https://img.freepik.com/fotos-gratis/close-up-aperto-de-mao-de-empresarios_23-2148825865.jpg?t=st=1742513648~exp=1742517248~hmac=b2140f1cabc83c88fa2d033e606c94e0cf834cefb4f6cb7e763cb21b2b0ff4c6&w=996" alt="image about content">
-                </div>
-            </div>
-            <div class="item">    
-                <div class="content-image">
-                    <img src="https://img.freepik.com/fotos-gratis/vista-lateral-homem-sorridente-olhando-para-tablet_23-2148230738.jpg?t=st=1742513592~exp=1742517192~hmac=6c83dd71aed3f8bb027f98e208e16f1f4a6f729bcf9ada73bb2ae3c4a898fbf3&w=740" alt="image about content">
-                </div>
-                <div class="content">    
-                    <div class="MVV">
-                        <h3 class="mvv-title">Visão</h3>
-                        <p class="mvv-text">
-                            Ser reconhecida como uma empresa júnior de excelência 
-                            no desenvolvimento de sistemas e na organização de 
-                            eventos, criando um impacto positivo no mercado 
-                            e contribuindo para a evolução do setor tecnológico
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">    
-                <div class="content">    
-                    <div class="MVV">
-                        <h3 class="mvv-title">Valores</h3>
-                        <p class="mvv-text">
-                            Acreditamos no poder do código para transformar ideias 
-                            em soluções inovadoras. Com colaboração, aprendizado contínuo 
-                            e qualidade, desenvolvemos tecnologia que impacta o mercado e 
-                            capacita nossos membros.
-                        </p>
-                    </div>
-                </div>
-                <div class="content-image">
-                    <img src="https://img.freepik.com/fotos-gratis/colegas-de-trabalho-trabalhando-em-relatorios-e-se-comunicando-enquanto-trabalhavam-no-escritorio-o-foco-esta-na-mulher_637285-1061.jpg?t=st=1742513562~exp=1742517162~hmac=e105808d1b632a841d6a792a555f2cd85a00199243779e16826e626bc62b4863&w=996" alt="image about content">
-                </div>
-            </div>
-        </section>
-        <section id="projects" class="projects">
-            <h1 class="projects-title">Nossos Projetos</h1>
-            <p class="projects-subtitle">
-                Veja alguns softwares produzidos por
-                nossa equipe de desenvolvimento.
-            </p>
-            <div class="project-container">
-                <button class="button-carrossel">&lt;</button>
-                <div style="transform: scale(0.88); border-image: linear-gradient(-90deg, transparent, #d6d6d6) 1;" class="project">
-                    <h3>TypeX Hub</h3>
-                    <h5>Tecnologias Utilizadas:</h5>
-                    <p>
-                        Foram utilizadas as tecnologias: HTML, CSS, JavaScript,
-                        Node.js, React, MongoDB.
+                    <p class="text-gray-300 leading-relaxed">
+                        Desenvolver soluções tecnológicas inovadoras e de qualidade, atendendo às necessidades de empresas 
+                        e organizações, enquanto promovemos o aprendizado prático dos nossos membros.
                     </p>
-                    <h5>O que é?</h5>
-                    <p>
-                        Esse sistema foi desenvolvido para controlar todas
-                        as áreas da TypeX, como projetos, eventos, membros,
-                        parceiros, etc.
+                </div>
+                
+                <div class="glass-effect p-8 rounded-2xl transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-eye text-4xl text-purple-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-purple-400">Visão</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Ser reconhecida como uma empresa júnior de excelência no desenvolvimento de sistemas, 
+                        criando impacto positivo no mercado e contribuindo para a evolução tecnológica.
+                    </p>
+                </div>
+                
+                <div class="glass-effect p-8 rounded-2xl transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-heart text-4xl text-pink-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-pink-400">Valores</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Colaboração, aprendizado contínuo, qualidade e inovação. Acreditamos no poder do código 
+                        para transformar ideias em soluções que fazem a diferença.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        É um sistema completo, com login, cadastro, edição,
-                        exclusão, listagem, etc.
-                    </p>
-                    <div class="buttons-see">
-                        <a href="#" class="see-code">Veja o Código</a>
-                        <a href="#" class="see-project">Veja o Projeto</a>
-                    </div>
-                </div>
-                <div class="project">
-                    <h3>TypeX</h3>
-                    <h5>Tecnologias Utilizadas:</h5>
-                    <p>
-                        Foram utilizadas as tecnologias: HTML, CSS, JavaScript,
-                        Node.js, React, MongoDB.
-                    </p>
-                    <h5>O que é?</h5>
-                    <p>
-                        Esse sistema foi desenvolvido para controlar todas
-                        as áreas da TypeX, como projetos, eventos, membros,
-                        parceiros, etc.
-
-                        É um sistema completo, com login, cadastro, edição,
-                        exclusão, listagem, etc.
-                    </p>
-                    <div class="buttons-see">
-                        <a href="#" class="see-code">Veja o Código</a>
-                        <a href="#" class="see-project">Veja o Projeto</a>
-                    </div>
-                </div>
-                <div style="transform: scale(0.88); border-image: linear-gradient(90deg, transparent, #d6d6d6) 1;" class="project">
-                    <h3>TypeX Hub</h3>
-                    <h5>Tecnologias Utilizadas:</h5>
-                    <p>
-                        Foram utilizadas as tecnologias: HTML, CSS, JavaScript,
-                        Node.js, React, MongoDB.
-                    </p>
-                    <h5>O que é?</h5>
-                    <p>
-                        Esse sistema foi desenvolvido para controlar todas
-                        as áreas da TypeX, como projetos, eventos, membros,
-                        parceiros, etc.
-
-                        É um sistema completo, com login, cadastro, edição,
-                        exclusão, listagem, etc.
-                    </p>
-                    <div class="buttons-see">
-                        <a href="#" class="see-code">Veja o Código</a>
-                        <a href="#" class="see-project">Veja o Projeto</a>
-                    </div>
-                </div>
-                <button class="button-carrossel">&gt;</button>
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 px-6 bg-gradient-to-b from-gray-800 to-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 gradient-text">Nossos Serviços</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Oferecemos soluções completas em tecnologia, desde desenvolvimento web até consultoria especializada
+                </p>
             </div>
-        </section>
-        <section id="servicos" class="servicos">
-            <div class="servicos-container">
-                <div class="servicos-top">
-                    <h1 class="servicos_title">Serviços</h1>
-                    <p>
-                        A TypeX foi fundada por um grupo de estudantes da UTFPR com o objetivo 
-                        de unir o aprendizado acadêmico à prática do mercado. Desde sua criação, 
-                        a empresa tem se destacado pelo desenvolvimento de sistemas tecnológicos 
-                        inovadores, além da promoção de eventos como hackathons e meetups, que 
-                        ajudam a aproximar estudantes, empresas e profissionais do setor de TI.
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-effect p-8 rounded-2xl group hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-code text-4xl text-cyan-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-2xl font-bold text-white">Desenvolvimento Web</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Sites responsivos, sistemas web complexos e aplicações modernas utilizando as melhores tecnologias do mercado.
                     </p>
-                </div>
-                <div class="servicos-content">
-                    <div class="servicos-card">
-                        <div class="servicos-card-img">
-                            <img src="https://img.freepik.com/fotos-gratis/plano-de-fundo-de-programacao-com-pessoa-trabalhando-com-codigos-no-computador_23-2150010125.jpg?t=st=1742539227~exp=1742542827~hmac=1af4fe270045026537515c275b3668e5154e238e65eac8ffa11af5fc6cb0eca2&w=996" alt="">
-                        </div>
-                        <h2>Serviço Título</h2>
-                        <p>
-                            Descrição Card Descrição Card Descrição Card
-                            Descrição Card Descrição Card Descrição Card
-                            Descrição Card Descrição Card Descrição Card
-                        </p>
-                        <button style="font-size: 1.5vh;" class="neon-effect">Saiba Mais <i class="fa-solid fa-greater-than"></i></button>
-                    </div>
-                    <div class="servicos-card">
-                        <div class="servicos-card-img">
-                            <img src="https://img.freepik.com/fotos-gratis/conceito-de-colagem-de-html-e-css_23-2150061955.jpg?t=st=1742539286~exp=1742542886~hmac=42da93b59364bd1fe5fb62a30c4baf5b107f9603381a176889769d6cd33e8530&w=900" alt="">
-                        </div>
-                        <h2>Serviço Título</h2>
-                        <p>
-                            Descrição Card Descrição Card Descrição Card
-                            Descrição Card Descrição Card Descrição Card
-                            Descrição Card Descrição Card Descrição Card
-                        </p>
-                        <button style="font-size: 1.5vh;" class="neon-effect">Saiba Mais <i class="fa-solid fa-greater-than"></i></button>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">AngularJS</span>
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Java</span>
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">PHP</span>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="futuro" class="futuro">
-            <div class="futuro-container">
-                <div class="futuro-top">
-                    <div class="futuro-top-img">
-                        <img src="./src/images/small logo.svg" alt="small logo">
+                
+                <div class="glass-effect p-8 rounded-2xl group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-mobile-alt text-4xl text-purple-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-2xl font-bold text-white">Apps Mobile</h3>
                     </div>
-                    <h1 class="futuro_title">Futuro</h1>
-                    <p>
-                        A TypeX foi fundada por um grupo de estudantes da UTFPR com o objetivo 
-                        de unir o aprendizado acadêmico à prática do mercado. Desde sua criação, 
-                        a empresa tem se destacado pelo desenvolvimento de sistemas tecnológicos 
-                        inovadores, além da promoção de eventos como hackathons e meetups, que 
-                        ajudam a aproximar estudantes, empresas e profissionais do setor de TI.
+                    <p class="text-gray-300 mb-6">
+                        Aplicativos nativos e híbridos para iOS e Android, com foco em performance e experiência do usuário.
                     </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">React Native</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Flutter</span>
+                    </div>
                 </div>
-                <div class="future-content">
-                    <div class="futuro-item">
-                        <h2>Ponto 1</h2>
-                        <p>
-                            texto do futuro texto do futuro texto do futuro
-                            texto do futuro texto do futuro texto do futuro
-                            texto do futuro texto do futuro texto do futuro
-                        </p>
-                        <button>Saiba Mais</button>
+                
+                <div class="glass-effect p-8 rounded-2xl group hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-robot text-4xl text-green-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-2xl font-bold text-white">Automação</h3>
                     </div>
-                    <div class="futuro-item">
-                        <h2>Ponto 2</h2>
-                        <p>
-                            texto do futuro texto do futuro texto do futuro
-                            texto do futuro texto do futuro texto do futuro
-                            texto do futuro texto do futuro texto do futuro
-                        </p>
-                        <button>Saiba Mais</button>
+                    <p class="text-gray-300 mb-6">
+                        Soluções de automação para otimizar processos, reduzir custos e aumentar a produtividade da sua empresa.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">APIs</span>
                     </div>
-                    <div class="futuro-item">
-                        <h2>Ponto 3</h2>
-                        <p>
-                            texto do futuro texto do futuro texto do futuro
-                            texto do futuro texto do futuro texto do futuro
-                            texto do futuro texto do futuro texto do futuro
-                        </p>
-                        <button>Saiba Mais</button>
+                </div>
+                
+                <div class="glass-effect p-8 rounded-2xl group hover:shadow-2xl hover:shadow-yellow-500/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-chart-line text-4xl text-yellow-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-2xl font-bold text-white">Consultoria</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Análise de processos, arquitetura de software e consultoria especializada para otimizar sua tecnologia.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">Estratégia</span>
+                        <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">Análise</span>
+                    </div>
+                </div>
+                
+                <div class="glass-effect p-8 rounded-2xl group hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-paint-brush text-4xl text-red-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-2xl font-bold text-white">Identidade Visual</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Criação de logotipos, paletas de cores e identidade visual para fortalecer a marca da sua empresa.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Illustrator</span>
+                        <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Figma</span>
+                    </div>
+                </div>
+                
+                <div class="glass-effect p-8 rounded-2xl group hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-calendar-alt text-4xl text-indigo-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-2xl font-bold text-white">Eventos</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Hackathons, meetups e workshops para promover networking e conhecimento na comunidade tech.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Hackathons</span>
+                        <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Meetups</span>
                     </div>
                 </div>
             </div>
-        </section> 
-    </main>
+        </div>
+    </section>
 
-    <footer id="footer" class="text-white">
-        <div class="footer-container">
-            <div class="footer-content row">
-                <div class="responsivity">
-                    <!-- Redes Sociais -->
-                    <div class="redes-sociais col-md-3 text-center text-md-start">
-                        <h1 class="mb-4">Redes Sociais</h1>
-                        <div class="icons d-flex justify-content-center justify-content-md-start gap-4"> <!-- gap-4 = espaçamento entre ícones -->
-                            <a href="#" class="text-white"><i class="fab fa-tiktok fa-2x"></i></a>
-                            <a href="#" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
-                            <a href="#" class="text-white"><i class="fab fa-whatsapp fa-2x"></i></a>
-                            <a href="#" class="text-white"><i class="fab fa-facebook fa-2x"></i></a>
-                            <a href="#" class="text-white"><i class="fab fa-linkedin-in fa-2x"></i></a>
+    <!-- Diretoria -->
+    <section id="diretoria" class="py-20 px-6 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 gradient-text">Nossa Diretoria</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Líderes visionários que guiam nossa empresa rumo à excelência e inovação
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="src/images/foto-diretoria.jpg" alt="Foto da Diretoria" 
+                         class="rounded-2xl shadow-2xl w-full object-cover transform hover:scale-105 transition-all duration-500">
+                </div>
+                
+                <div class="space-y-8" data-aos="fade-left">
+                    <div class="glass-effect p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold text-cyan-400 mb-4">Estrutura Organizacional</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 transition">
+                                <span class="text-lg">Presidência Executiva</span>
+                            </div>
+                            <div class="flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 transition">
+                                <span class="text-lg">Diretoria de Projetos</span>
+                            </div>
+                            <div class="flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 transition">
+                                <span class="text-lg">Diretoria de Infraestrutura</span>
+                            </div>
+                            <div class="flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 transition">
+                                <span class="text-lg">Diretoria de Marketing</span>
+                            </div>
+                            <div class="flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 transition">
+                                <span class="text-lg">Diretoria Financeira</span>
+                            </div>
+                            <div class="flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 transition">
+                                <span class="text-lg">Diretoria de Recursos Humanos</span>
+                            </div>
                         </div>
                     </div>
-        
-                    <!-- Localização -->
-                    <div class="localizacao col-md-3 text-center">
-                        <h1 class="mb-4">Localização</h1>
-                        <a href="#" class="text-white text-decoration-none d-inline-block">
-                            UTFPR-FB Guarita de Entrada - Francisco Beltrão, PR
+                    
+                    <div class="text-center">
+                        <a href="#contato" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold transition-all duration-300 transform hover:scale-105">
+                            <i class="fas fa-handshake"></i>
+                            Trabalhe Conosco
                         </a>
                     </div>
                 </div>
-    
-                <!-- Formulário -->
-                <div class="contato col-md-3">
-                    <h1 class="text-center mb-4">Contato</h1>
-                    <form>
-                        <div class="mb-3">
-                            <label for="nome" class="form-label">Nome:</label>
-                            <input type="text" class="form-control" id="nome" placeholder="Insira Seu Nome" required>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membros Gerais -->
+    <section id="membros" class="py-20 px-6 bg-gradient-to-b from-gray-800 to-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 gradient-text">Nossos Membros</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    O coração da TypeX, profissionais apaixonados que transformam ideias em realidade
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8" data-aos="fade-right">
+                    <div class="glass-effect p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold text-cyan-400 mb-4">Áreas de Atuação</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition">
+                                <i class="fas fa-code text-cyan-400"></i>
+                                <span>Frontend</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition">
+                                <i class="fas fa-server text-green-400"></i>
+                                <span>Backend</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition">
+                                <i class="fas fa-mobile-alt text-purple-400"></i>
+                                <span>Mobile</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition">
+                                <i class="fas fa-paint-brush text-pink-400"></i>
+                                <span>UI/UX</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition">
+                                <i class="fas fa-chart-bar text-yellow-400"></i>
+                                <span>Data Science</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition">
+                                <i class="fas fa-shield-alt text-red-400"></i>
+                                <span>DevOps</span>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Insira Seu Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="mensagem" class="form-label">Mensagem:</label>
-                            <textarea class="form-control" id="mensagem" rows="3" maxlength="500" placeholder="Insira Sua Mensagem" required></textarea>
-                        </div>
-                        <button type="submit" class="btn w-100">Enviar</button>
-                    </form>
+                    </div>
+                    
+                    <div class="glass-effect p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold text-purple-400 mb-4">Por que somos diferentes?</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-400"></i>
+                                Projetos reais com impacto no mercado
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-400"></i>
+                                Metodologias ágeis e modernas
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-400"></i>
+                                Ambiente colaborativo e inovador
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-400"></i>
+                                Desenvolvimento profissional contínuo
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <img src="src/images/foto-membros-geral.jpg" alt="Foto dos Membros Gerais" 
+                         class="rounded-2xl shadow-2xl w-full object-cover transform hover:scale-105 transition-all duration-500">
                 </div>
             </div>
         </div>
-    
-        <!-- Copyright -->
-        <div class="end mt-5">
-            <div class="container text-center">
-                <span>Copyright ©2025 | by TypeX - Sistemas.</span>
+    </section>
+<!---
+    <section id="projetos" class="py-20 px-6 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 gradient-text">Nossos Projetos</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Soluções inovadoras que já impactaram empresas e comunidades
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-effect rounded-2xl overflow-hidden group hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-cyan-400 to-blue-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                            <i class="fas fa-laptop-code text-6xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm">Web App</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">TypeX Hub</h3>
+                        <p class="text-gray-300 mb-4 text-sm">
+                            Sistema completo de gestão interna com dashboard, controle de projetos, membros e eventos.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 rounded text-xs">React</span>
+                            <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 rounded text-xs">Node.js</span>
+                            <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 rounded text-xs">MongoDB</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="#" class="flex-1 px-4 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-400 rounded-lg text-center text-sm transition">
+                                <i class="fas fa-code mr-2"></i>Código
+                            </a>
+                            <a href="#" class="flex-1 px-4 py-2 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 rounded-lg text-center text-sm transition">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-2xl overflow-hidden group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-6xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm">Mobile</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">EcoTrack</h3>
+                        <p class="text-gray-300 mb-4 text-sm">
+                            Aplicativo mobile para controle de consumo sustentável e gamificação de práticas ecológicas.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs">React Native</span>
+                            <span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs">Firebase</span>
+                            <span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs">Python</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="#" class="flex-1 px-4 py-2 bg-purple-500/20 hover:bg-purple-500/30 text-purple-400 rounded-lg text-center text-sm transition">
+                                <i class="fas fa-code mr-2"></i>Código
+                            </a>
+                            <a href="#" class="flex-1 px-4 py-2 bg-pink-500/20 hover:bg-pink-500/30 text-pink-400 rounded-lg text-center text-sm transition">
+                                <i class="fas fa-download mr-2"></i>Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-2xl overflow-hidden group hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-emerald-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                            <i class="fas fa-robot text-6xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm">Automação</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">AutoBot Pro</h3>
+                        <p class="text-gray-300 mb-4 text-sm">
+                            Sistema de automação para processos empresariais com IA e machine learning integrados.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs">Python</span>
+                            <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs">TensorFlow</span>
+                            <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs">Docker</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="#" class="flex-1 px-4 py-2 bg-green-500/20 hover:bg-green-500/30 text-green-400 rounded-lg text-center text-sm transition">
+                                <i class="fas fa-code mr-2"></i>Código
+                            </a>
+                            <a href="#" class="flex-1 px-4 py-2 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 rounded-lg text-center text-sm transition">
+                                <i class="fas fa-play mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
+                <a href="#contato" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-rocket"></i>
+                    Vamos criar seu projeto?
+                </a>
+            </div>
+        </div>
+    </section>
+
+-->
+
+    <!-- Estatísticas
+    <section class="py-20 px-6 bg-gradient-to-r from-gray-900 to-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="glass-effect p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-bold text-cyan-400 mb-2">25+</div>
+                    <div class="text-gray-300">Projetos Concluídos</div>
+                </div>
+                <div class="glass-effect p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-bold text-purple-400 mb-2">20+</div>
+                    <div class="text-gray-300">Membros Ativos</div>
+                </div>
+                <div class="glass-effect p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl font-bold text-green-400 mb-2">10+</div>
+                    <div class="text-gray-300">Clientes Satisfeitos</div>
+                </div>
+                <div class="glass-effect p-6 rounded-xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl font-bold text-yellow-400 mb-2">3+</div>
+                    <div class="text-gray-300">Anos de Experiência</div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    -->
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 px-6 bg-gradient-to-b from-gray-800 to-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 gradient-text">Vamos Conversar?</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Pronto para transformar sua ideia em realidade? Entre em contato conosco!
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Formulário -->
+                <div class="glass-effect p-8 rounded-2xl" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6 text-cyan-400">Envie sua mensagem</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-300 mb-2">Nome</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition" placeholder="Seu nome">
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 mb-2">Empresa</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition" placeholder="Sua empresa">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">E-mail</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition" placeholder="seu@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Tipo de Projeto</label>
+                            <select class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition">
+                                <option>Desenvolvimento Web</option>
+                                <option>Aplicativo Mobile</option>
+                                <option>Automação</option>
+                                <option>Consultoria</option>
+                                <option>Data Science</option>
+                                <option>Outro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Mensagem</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition" placeholder="Conte-nos sobre seu projeto..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-4 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold shadow-xl transition-all duration-300 transform hover:scale-105">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="space-y-8" data-aos="fade-left">
+                    <div class="glass-effect p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-400">Informações</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-map-marker-alt text-cyan-400 text-xl mt-1"></i>
+                                <div>
+                                    <div class="font-semibold">Localização</div>
+                                    <div class="text-gray-300">UTFPR-FB Guarita de Entrada<br>Francisco Beltrão, PR</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-envelope text-purple-400 text-xl mt-1"></i>
+                                <div>
+                                    <div class="font-semibold">E-mail</div>
+                                    <div class="text-gray-300">contato@typex.com.br</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-clock text-green-400 text-xl mt-1"></i>
+                                <div>
+                                    <div class="font-semibold">Horário</div>
+                                    <div class="text-gray-300">Seg - Sex: 12h às 20h</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-effect p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-pink-400">Redes Sociais</h3>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                                <i class="fab fa-instagram text-white"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                                <i class="fab fa-linkedin-in text-white"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                                <i class="fab fa-github text-white"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-green-700 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                                <i class="fab fa-whatsapp text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-effect p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-400">Processo de Trabalho</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center text-sm font-bold">1</div>
+                                <span class="text-gray-300">Análise do projeto</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-sm font-bold">2</div>
+                                <span class="text-gray-300">Proposta personalizada</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-sm font-bold">3</div>
+                                <span class="text-gray-300">Desenvolvimento ágil</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center text-sm font-bold">4</div>
+                                <span class="text-gray-300">Entrega e suporte</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 bg-gray-950 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        <div class="relative z-10 max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="text-center md:text-left" data-aos="fade-up">
+                    <div class="flex items-center gap-3 justify-center md:justify-start mb-4">
+                        <img src="src/images/tx-logo.svg" alt="TypeX Logo" class="h-10 w-auto">
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Empresa Júnior de Tecnologia da UTFPR, desenvolvendo o futuro através da inovação.
+                    </p>
+                    <div class="flex gap-3 justify-center md:justify-start">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 to-red-600 flex items-center justify-center hover:scale-110 transition-transform">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center hover:scale-110 transition-transform">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 flex items-center justify-center hover:scale-110 transition-transform">
+                            <i class="fab fa-github text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gradient-to-r from-green-500 to-green-700 flex items-center justify-center hover:scale-110 transition-transform">
+                            <i class="fab fa-whatsapp text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-4 text-white">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#quem-somos" class="text-gray-400 hover:text-cyan-400 transition">Quem Somos</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-cyan-400 transition">Serviços</a></li>
+                        <li><a href="#projetos" class="text-gray-400 hover:text-cyan-400 transition">Projetos</a></li>
+                        <li><a href="#contato" class="text-gray-400 hover:text-cyan-400 transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-4 text-white">Contato</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-envelope text-cyan-400 mr-2"></i> contato@typexsistemas.com.br</p>
+                        <p><i class="fas fa-phone text-purple-400 mr-2"></i> (46) 9935-9628</p>
+                        <p><i class="fas fa-map-marker-alt text-green-400 mr-2"></i> Francisco Beltrão, PR</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 TypeX - Empresa Júnior UTFPR. Todos os direitos reservados.
+                </p>
             </div>
         </div>
     </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('backdrop-blur-xl');
+            } else {
+                navbar.classList.remove('backdrop-blur-xl');
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.parallax');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+        });
+    </script>
 </body>
 </html>
